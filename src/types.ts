@@ -1,5 +1,6 @@
 export type QuoteType = 'auf' | 'sun-tzu' | 'confucius' | 'klitschko';
-export type OpponentType = 'sun-tzu' | 'confucius' | 'klitschko';
+
+export type OpponentType = Exclude<QuoteType, 'auf'>;
 
 export interface Quote {
   text: string;

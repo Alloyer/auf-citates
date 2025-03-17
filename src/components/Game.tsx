@@ -12,6 +12,8 @@ import {
 import { quotes } from '../data/quotes';
 import { GameState, Quote, QuoteType, OpponentType } from '../types';
 
+const APP_VERSION = '0.1.0';
+
 const OPPONENTS: OpponentType[] = ['sun-tzu', 'confucius', 'klitschko'];
 
 const getOpponentButtonText = (opponent: OpponentType): string => {
@@ -104,7 +106,14 @@ const Game: React.FC = () => {
 
   return (
     <Container maxWidth="sm">
-      <Box display="flex" flexDirection="column" alignItems="center" minHeight="100vh" py={4}>
+      <Box 
+        display="flex" 
+        flexDirection="column" 
+        alignItems="center" 
+        minHeight="100vh" 
+        py={4}
+        position="relative"
+      >
         <Paper elevation={3} sx={{ p: 4, width: '100%', textAlign: 'center' }}>
           <Typography variant="h4" gutterBottom>
             Угадай цитату
@@ -145,6 +154,19 @@ const Game: React.FC = () => {
             Начать заново
           </Button>
         </Paper>
+        
+        <Typography 
+          variant="caption" 
+          sx={{ 
+            position: 'absolute',
+            bottom: 8,
+            right: 8,
+            opacity: 0.4,
+            userSelect: 'none'
+          }}
+        >
+          v{APP_VERSION}
+        </Typography>
       </Box>
     </Container>
   );
