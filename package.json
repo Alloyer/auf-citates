@@ -1,7 +1,7 @@
 {
   "name": "auf-citates",
   "homepage": "https://Alloyer.github.io/auf-citates",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.14.0",

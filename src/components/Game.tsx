@@ -15,9 +15,9 @@ import {
   ArrowForward as ArrowForwardIcon
 } from '@mui/icons-material';
 import { quotes } from '../data/quotes';
-import { GameState, Quote, QuoteType, OpponentType, QuoteHistory } from '../types';
+import { GameState, Quote, QuoteType, OpponentType, QuoteHistory } from '../types/index';
 
-const APP_VERSION = '0.1.0';
+const APP_VERSION = '0.2.1';
 const MAX_QUOTES = 100;
 
 const OPPONENTS: OpponentType[] = ['sun-tzu', 'confucius', 'klitschko'];
