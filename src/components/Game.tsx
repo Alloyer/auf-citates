@@ -5,7 +5,9 @@ import {
   Typography, 
   Button, 
   Box,
-  CircularProgress
+  CircularProgress,
+  useTheme,
+  useMediaQuery
 } from '@mui/material';
 import { quotes } from '../data/quotes';
 import { GameState, Quote, QuoteType, OpponentType } from '../types';
@@ -25,20 +27,28 @@ const getOpponentButtonText = (opponent: OpponentType): string => {
   }
 };
 
-const buttonContainerStyles = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'center',
-  gap: 2,
-  width: '100%',
-  '& > button': {
-    flex: '1 1 0',
-    maxWidth: '280px',
-    height: '48px'
-  }
-};
-
 const Game: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const buttonContainerStyles = {
+    display: 'flex',
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 2,
+    width: '100%',
+    '& > button': {
+      width: isMobile ? '100%' : '280px',
+      height: 'auto',
+      minHeight: '48px',
+      whiteSpace: 'normal',
+      padding: '12px 16px',
+      fontSize: isMobile ? '0.875rem' : '0.9375rem',
+      lineHeight: '1.2'
+    }
+  };
+
   const [gameState, setGameState] = useState<GameState>({
     currentQuote: null,
     score: 0,
