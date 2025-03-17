@@ -7,10 +7,20 @@ export interface Quote {
   type: QuoteType;
 }
 
+export interface QuoteHistory {
+  quote: Quote;
+  userAnswer: QuoteType;
+  isCorrect: boolean;
+  opponent: OpponentType;
+}
+
 export interface GameState {
   currentQuote: Quote | null;
   score: number;
   totalQuestions: number;
   isGameOver: boolean;
   currentOpponent: OpponentType;
+  history: QuoteHistory[];
+  currentHistoryIndex: number;
+  usedQuotes: Set<string>;
 } 
