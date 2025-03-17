@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/auf-citates/static/css/main.e6c13ad2.css",
-    "main.js": "/auf-citates/static/js/main.a0c0eef1.js",
+    "main.js": "/auf-citates/static/js/main.fe6f713e.js",
     "static/js/453.2fae704f.chunk.js": "/auf-citates/static/js/453.2fae704f.chunk.js",
     "index.html": "/auf-citates/index.html",
     "main.e6c13ad2.css.map": "/auf-citates/static/css/main.e6c13ad2.css.map",
-    "main.a0c0eef1.js.map": "/auf-citates/static/js/main.a0c0eef1.js.map",
+    "main.fe6f713e.js.map": "/auf-citates/static/js/main.fe6f713e.js.map",
     "453.2fae704f.chunk.js.map": "/auf-citates/static/js/453.2fae704f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.a0c0eef1.js"
+    "static/js/main.fe6f713e.js"
   ]
 }
